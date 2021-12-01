@@ -11,7 +11,6 @@ func triplets(data []int) (triplets []int) {
 }
 
 func increaseCount(data []int) (count int) {
-	count = 0
 	for i, current := range data {
 		if i != 0 && current > data[i-1] {
 			count++
@@ -31,6 +30,6 @@ func part2(input []int) (count int) {
 
 func main() {
 	input := FileToIntArray("input.txt")
-	fmt.Print(part1(input))
-	fmt.Print(part2(input))
+	fmt.Println(part1(input))
+	fmt.Println(part2(input))
 }

@@ -20,9 +20,17 @@ func increaseCount(data []int) (count int) {
 	return
 }
 
+func part1(input []int) (count int) {
+	return increaseCount(input)
+}
+
+func part2(input []int) (count int) {
+	triplets := triplets(input)
+	return increaseCount(triplets)
+}
+
 func main() {
-	data := FileToIntArray("input.txt")
-	triplets := triplets(data)
-	count := increaseCount(triplets)
-	fmt.Print(count)
+	input := FileToIntArray("input.txt")
+	fmt.Print(part1(input))
+	fmt.Print(part2(input))
 }

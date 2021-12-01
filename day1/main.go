@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"time"
+)
 
 func triplets(data []int) (triplets []int) {
 	for i, current := range data[:len(data)-2] {
@@ -29,7 +32,13 @@ func part2(input []int) (count int) {
 }
 
 func main() {
+	start := time.Now()
 	input := FileToIntArray("input.txt")
-	fmt.Println(part1(input))
-	fmt.Println(part2(input))
+	part1 := part1(input)
+	part2 := part2(input)
+	time := time.Since(start)
+
+	fmt.Println(part1)
+	fmt.Println(part2)
+	fmt.Println("Time: ", time)
 }

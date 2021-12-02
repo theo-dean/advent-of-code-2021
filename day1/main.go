@@ -3,8 +3,6 @@ package main
 import (
 	"fmt"
 	"time"
-
-	"github.com/theo-dean/advent-of-code-2021/utils"
 )
 
 func triplets(data []int) (triplets []int) {
@@ -35,7 +33,7 @@ func part2(input []int) (count int) {
 
 func main() {
 	start := time.Now()
-	input := utils.FileToIntArray("input.txt")
+	input := FileToIntArray("input.txt")
 	part1 := part1(input)
 	part2 := part2(input)
 	time := time.Since(start)
